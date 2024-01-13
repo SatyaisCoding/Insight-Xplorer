@@ -1,8 +1,8 @@
-import MaxWidthWrapper from '@/components/MaxWidthWrapper'
-import Link from 'next/link'
-import { ArrowRight } from 'lucide-react'
-import { buttonVariants } from '@/components/ui/button'
-import Image from 'next/image'
+import MaxWidthWrapper from './components/MaxWidthWrapper';
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
+import { buttonVariants } from '@/components/ui/button';
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -19,7 +19,7 @@ export default function Home() {
          
         </h1>
         <p className='mt-5 max-w-prose text-zinc-700 sm:text-lg'>
-           Insight-Xplorer allows you to have conversations with any
+          Insight-Xplorer allows you to have conversations with any
           PDF document. Simply upload your file and start
           asking questions right away.
         </p>
@@ -141,7 +141,7 @@ export default function Home() {
                 Start asking questions
               </span>
               <span className='mt-2 text-zinc-700'>
-                It&apos;s that simple. Try out Quill today -
+                It&apos;s that simple. Try out Insight-Xplorer today -
                 it really takes less than a minute.
               </span>
             </div>
