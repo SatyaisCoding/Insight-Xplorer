@@ -4,7 +4,7 @@ import { redirect } from 'next/navigation';
 const Page = async () => {
     const { getUser } = getKindeServerSession();
     const user = getUser();
-  return <div>{user.email}</div>
+  return <div>Satya Prakash</div>
 }
 
 export default Page
