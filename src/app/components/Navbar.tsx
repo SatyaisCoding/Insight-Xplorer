@@ -1,7 +1,7 @@
 import Link from "next/link";
 import MaxWidthWrapper from "./MaxWidthWrapper";
-import { LoginLink, RegisterLink} from "@kinde-oss/kinde-auth-nextjs";
 import { ArrowRight } from "lucide-react";
+import { LoginLink, RegisterLink } from "@kinde-oss/kinde-auth-nextjs/server";
 
 
 import { buttonVariants } from "@/components/ui/button";
@@ -15,39 +15,41 @@ const Navbar = () => {
                     <Link
                         href='/'
                         className='flex z-40 font-semibold'>
-                        <span>Insight-Xplorer.</span>
+                        <span>Insight-Xplorer</span>
                     </Link>
 
                     {/* todo : add mobile navbar */}
+                    <div className=" hidden item-center space-x-4 sm:flex">
+                        <>
+                            <Link
+                                href='/premium'
+                                className={buttonVariants({
+                                    variant: 'ghost',
+                                    size: 'sm',
+                                })}>
+                                Premium
+                            </Link>
+                            <LoginLink
+                                className={buttonVariants({
+                                    variant: 'ghost',
+                                    size: 'sm',
+                                })}>
+                                Sign in
+                            </LoginLink>
+                            <RegisterLink
+                                className={buttonVariants({
+                                    size: 'sm',
+                                })}>
+                                Get started{' '}
+                                <ArrowRight className='ml-1.5 h-5 w-5' />
+                            </RegisterLink>
 
-                    <div className='hidden items-center space-x-4 sm:flex'>
-                            <>
-                                <Link
-                                    href='/pricing'
-                                    className={buttonVariants({
-                                        variant: 'ghost',
-                                        size: 'sm',
-                                    })}>
-                                    Pricing
-                                </Link>
-                                <LoginLink
-                                    className={buttonVariants({
-                                        variant: 'ghost',
-                                        size: 'sm',
-                                    })}>
-                                    Sign in
-                                </LoginLink>
-                                <RegisterLink
-                                    className={buttonVariants({
-                                        size: 'sm',
-                                    })}>
-                                    Get started{' '}
-                                    <ArrowRight className='ml-1.5 h-5 w-5' />
-                                </RegisterLink>
-                            </>
-                     </div>
+                        </>
+                    </div>
+
                 </div>
             </MaxWidthWrapper>
+
         </nav>
 
     );
