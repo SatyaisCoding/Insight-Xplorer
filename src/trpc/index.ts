@@ -1,4 +1,4 @@
-import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server'
+import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server';
 import {
   privateProcedure,
   publicProcedure,
@@ -6,7 +6,7 @@ import {
 } from './trpc';
 import { TRPCError } from '@trpc/server';
 import { db } from '@/db';
-import { z } from 'zod'
+import { z } from 'zod';
 import { INFINITE_QUERY_LIMIT } from '@/config/infinite-query';
 import { absoluteUrl } from '@/lib/utils';
 import {
